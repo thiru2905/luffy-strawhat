@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.main-title {
+    position: absolute;
+    color: #ff4d4d;
+    font-size: 5rem;
+    text-shadow: 0 0 20px rgba(255, 77, 77, 0.8);
+    z-index: 10;
+    pointer-events: none;
+    text-align: center;
+}
+
+.floating-text {
+    position: absolute;
+    white-space: nowrap;
+    animation: moveUpDown ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+@keyframes moveUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); }
+}
